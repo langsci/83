@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Language Science Press Master File       %%%
+%%%         follow the instructions below        %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[output=short             % long|short|inprep              
+% 	        ,blackandwhite
+% 		,smallfont
+%  	        ,draftmode  
+		,biblatex,
+		  ]{LSP/langsci}    
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          additional packages                 %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the 
+% following files. If you do not know what this might 
+% mean, you can safely ignore this section
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\input{localcommands.tex} 
+\bibliography{localbibliography} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Frontmatter                      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}              
+\maketitle                
+\frontmatter
+% %% uncomment if you have preface and/or acknowledgements
+% \include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations}
+\tableofcontents      
+\mainmatter         
+%  
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%                                              %%%
+% %%%             Chapters                         %%%
+% %%%                                              %%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/01}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/02}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/03}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/04}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/05}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/06}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/07}
+\appendix
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/aA}
+\cleardoublepage
+\setcounter{table}{0}
+\include{chapters/aB}
+% copy the lines above and adapt as necessary
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Backmatter                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% There is normally no need to change the backmatter section
+\input{backmatter.tex}
+\end{document} 
+
+% you can create your book by running
+% xelatex lsp-skeleton.tex
+%
+% you can also try a simple 
+% make
+% on the commandline
